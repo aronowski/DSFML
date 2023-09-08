@@ -137,7 +137,7 @@ struct IpAddress
 	///The "broadcast" address (for sending UDP messages to everyone on a local network) 
 	static immutable(IpAddress) Broadcast;
 
-	static this()
+	shared static this()
 	{
 		LocalHost = IpAddress(127,0,0,1);
 		Broadcast = IpAddress(255,255,255,255);
